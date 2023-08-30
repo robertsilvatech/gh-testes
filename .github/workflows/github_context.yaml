@@ -1,7 +1,10 @@
-name: Test
-on: workflow_dispatch
+name: First workflow
+on: workflow_dispatch # Define o evento que vai trigger
 jobs:
-	teste:
-		runs-on: ubunt-latest
-		steps:
-			- run: test is ok
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello world
+      - name: Print goodbye
+        run: echo "Done - bye"
