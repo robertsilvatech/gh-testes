@@ -1,6 +1,6 @@
 name: Show information about context Github
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: workflow_dispatch
-
 jobs: 
 	display:
 		runs-on: ubuntu-latest
