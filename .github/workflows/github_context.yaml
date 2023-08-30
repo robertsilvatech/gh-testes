@@ -1,14 +1,9 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Output information
 on: workflow_dispatch
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-
-jobs:
-	github-context:
+	info:
 		runs-on: ubuntu-latest
-		steps:
-			- run: ${{ toJson(github) }}
+		stepts:
+			- Output GitHub context
+				#run: echo "${{ github }}" # Identificação especifica, sintaxe especial
+				run: echo "${{ toJSON(github) }} "
