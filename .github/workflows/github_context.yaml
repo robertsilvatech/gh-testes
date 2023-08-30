@@ -1,10 +1,7 @@
-name: Output information
+name: Test
 on: workflow_dispatch
 jobs:
-  github-context:
-		runs-on: ubuntu-latest
+	teste:
+		runs-on: ubunt-latest
 		steps:
-			- Output GitHub context
-				#run: echo "${{ github }}" # Identificação especifica, sintaxe especial
-				run: echo teste
-				# fix indent
+			- run: test is ok
