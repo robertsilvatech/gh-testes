@@ -8,4 +8,3 @@ jobs:
       - name: Output GitHub context
         run: echo "${{ toJSON(github) }}"
       - run: echo "${{ github.workspace }} or ${{ github.path }}""
-      - run: 
