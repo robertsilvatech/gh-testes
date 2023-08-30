@@ -1,0 +1,9 @@
+name: call a script
+on: workflow_dispatch
+jobs:
+  call-script:
+    runs-on: ubuntu-latest
+    steps:
+      - run: | 
+          chmod +x scripts/teste.sh
+          bash -e scripts/teste.sh      
