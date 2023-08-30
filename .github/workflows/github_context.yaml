@@ -7,3 +7,4 @@ jobs:
 			- Output GitHub context
 				#run: echo "${{ github }}" # Identificação especifica, sintaxe especial
 				run: echo teste
+				# fix indent
