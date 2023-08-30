@@ -3,7 +3,7 @@ on: workflow_dispatch
 jobs:
 	info:
 		runs-on: ubuntu-latest
-		stepts:
+		steps:
 			- Output GitHub context
 				#run: echo "${{ github }}" # Identificação especifica, sintaxe especial
 				run: echo "${{ toJSON(github) }} "
