@@ -8,3 +8,8 @@ jobs:
         run: echo "Hello world
       - name: Print goodbye
         run: echo "Done - bye"
+	github-context:
+		runs-on: ubuntu-latest
+		steps:
+			- name: print
+				run: echo "oi"
