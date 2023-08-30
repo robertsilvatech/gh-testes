@@ -4,5 +4,7 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Output GitHub context
         run: echo "${{ toJSON(github) }}"
+      - run: echo "${{ github.workspace }} or ${{ github.path }}""
