@@ -4,6 +4,8 @@ jobs:
   call-script:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - run: | 
           chmod +x scripts/teste.sh
           bash -e scripts/teste.sh      
