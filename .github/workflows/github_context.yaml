@@ -1,12 +1,8 @@
-name: Show information about context Github
+name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: workflow_dispatch
-jobs: 
-	display:
-		runs-on: ubuntu-latest
-		steps:
-			- name: Show Github context
-			  run: |
-					echo "${{ toJson(github) }} "
-					echo "-------------------------------------""
-					echo $GITHUB_WORKSPACE
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
