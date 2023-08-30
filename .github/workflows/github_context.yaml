@@ -6,4 +6,4 @@ jobs:
 		steps:
 			- Output GitHub context
 				#run: echo "${{ github }}" # Identificação especifica, sintaxe especial
-				run: echo "${{ toJSON(github) }} "
+				run: echo teste
