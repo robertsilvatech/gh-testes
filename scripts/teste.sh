@@ -9,4 +9,4 @@ echo "Linha 2" >> $GITHUB_WORKSPACE/files/arquivo1.txt
 echo "Show variable github_workspace"
 echo $GITHUB_WORKSPACE
 
-pritenv
+printenv
