@@ -19,7 +19,10 @@ jobs:
         echo "Listando ambientes do repositório: $repo_slug"
         
         # Fazer uma chamada para a API do GitHub para listar ambientes
-        environments=$(curl -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/$repo_slug/environments")
+        get_environments=$(curl -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/$repo_slug/environments")
         
         # Exibir os resultados
         echo "$environments"
+        for env in $(echo $get_environments | jq -c '.environments.[]'); do
+            echo $env | jq -r '.name'
+        done
