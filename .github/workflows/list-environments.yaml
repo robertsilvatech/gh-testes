@@ -1,0 +1,25 @@
+name: Listar Ambientes
+
+on:
+  workflow_dispatch: # Isso permite acionar manualmente o fluxo
+
+jobs:
+  listar_ambientes:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Verificar código
+      uses: actions/checkout@v3 # Isso verifica o código do repositório
+
+    - name: Listar Ambientes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Isso permite acessar a API do GitHub
+      run: |
+        repo_slug="${{ github.repository }}"
+        echo "Listando ambientes do repositório: $repo_slug"
+        
+        # Fazer uma chamada para a API do GitHub para listar ambientes
+        environments=$(curl -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/$repo_slug/environments")
+        
+        # Exibir os resultados
+        echo "$environments"
