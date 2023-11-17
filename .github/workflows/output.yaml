@@ -7,4 +7,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Output GitHub context
         run: echo "${{ toJSON(github) }}"
-      - run: echo "${{ github.workspace }} or ${{ github.path }}""
+      - run: echo "${{ github.workspace }} or ${{ github.path }}"
+      - name: Owner
+        run: |
+          echo "${{ github.repository_owner }}"
